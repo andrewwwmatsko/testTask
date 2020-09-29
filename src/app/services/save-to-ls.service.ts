@@ -29,6 +29,7 @@ export class SaveToLSService {
   }
 
   deleteFromLS(repo){
+    // need to change logic...
     let repoId=repo.id;
     let likedRepos=[];
 

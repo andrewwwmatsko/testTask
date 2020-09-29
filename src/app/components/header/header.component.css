@@ -1,0 +1,27 @@
+h3 {
+    text-align: center;
+    color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 8px;
+    box-shadow: 8px 8px 8px 8px gray;
+    text-shadow: 1px 1px gray;
+    font-weight: bolder;
+    font-size: 40px;
+    background-color: powderblue;
+    margin-bottom:0;
+}
+.routes{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.path {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}

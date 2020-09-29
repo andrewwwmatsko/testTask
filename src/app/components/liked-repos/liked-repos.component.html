@@ -1,0 +1,28 @@
+<div>
+    <div class="showRepos" >
+        <h3 class="title">The repositories You liked:</h3>
+        <table class="infoTable" 
+    *ngFor="let repo of likedRepos"
+       cellspacing="5" cellpadding="10">
+            <thead>
+                <th>URL</th>
+                <th>Description</th>
+                <th>Name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <a class="links" href="{{repo.html_url}}">{{repo.html_url}}</a> </td>
+                    <td>{{repo.desc}}</td>
+                    <td>{{repo.name}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span (click)="delete(repo)"> <i class="fas fa-trash-alt"></i> </span>
+                    </td>
+                </tr>
+            </tbody>
+       </table>
+    </div>
+</div>
+    
+

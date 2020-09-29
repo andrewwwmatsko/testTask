@@ -1,0 +1,28 @@
+<div class="field">
+    <p class="title">Search repository:</p> 
+        <input [(ngModel)]="searchText" placeholder="enter search term here">
+        <table class="infoTable" 
+        *ngFor="let repo of repos | filter : {name: searchText, description:searchText, html_url: searchText}"
+        cellspacing="5" cellpadding="10">
+            <thead>
+                <th>URL</th>
+                <th>Description</th>
+                <th>Name</th>
+            </thead>
+            <tbody class="bodySec">
+                <tr>
+                    <td>
+                        <a href="{{repo.html_url}}"
+                        class="links"
+                        target="_blank">{{repo.html_url}}</a>
+                    </td>
+                    <td>{{repo.description}}</td>
+                    <td><strong>{{repo.name}}</strong></td>
+                    <td> 
+                        <span (click)="addToLocalStorage(repo)"><i class="fas fa-star"></i></span> 
+                    </td> 
+                </tr>
+            </tbody>
+       </table>
+
+</div>
